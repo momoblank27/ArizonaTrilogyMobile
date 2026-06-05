@@ -1,3 +1,17 @@
+function mh.toggle()
+    mh.enabled = not mh.enabled
+    if mh.enabled then
+        addLog("MH_PRO включён.")
+    else
+        addLog("MH_PRO выключен.")
+    end
+end
+
+-- пример регистрации команды (зависит от твоего API)
+-- если у тебя есть функция addCommandHandler:
+addCommandHandler("mhpro", function()
+    mh.toggle()
+end)
 -- MH_PRO 1.4.1 — Mobile Trilogy PRO
 -- Автор: Moroz
 
